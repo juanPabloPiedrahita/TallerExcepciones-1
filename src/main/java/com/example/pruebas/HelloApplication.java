@@ -24,10 +24,17 @@ public class HelloApplication extends Application {
 
 
     public static void main(String[] args) {
-        int a = 10;
-        int b = 0;
-        System.out.println("Resultado: " + (a / b));
-        launch();
+        int a = 10, b = 0;
+
+        try{
+            int resultado = a / b;
+
+            System.out.println("Resultado: " + (a / b));
+        } catch(ArithmeticException e) {
+            System.out.println("Error: no se puede dividir entre 0");
+        }
+
+        //launch();
     }
 }
 
